@@ -1,0 +1,16 @@
+server:
+  port : 8082
+spring:
+  application:
+    name: doctor-service
+  profiles:
+    active: development
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign-client:
+  quote-api:
+    url: http://localhost:9090
+    get-all-quotes: /quote-service/api/v1/quotes

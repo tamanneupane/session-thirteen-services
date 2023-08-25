@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  db-production:
+    container_name: "db-production"
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=production-user
+      - POSTGRES_PASSWORD=${AMBULANCE_PRODUCTION_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - production-volume:/var/lib/postgresql/data
+
+  db-development:
+    container_name: "db-development"
+    image: postgres
+    restart: always
+    depends_on:
+      - db-production
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=dev-user
+      - POSTGRES_PASSWORD=${AMBULANCE_DEVELOPMENT_PASSWORD}
+    ports:
+      - "5434:5432"
+    volumes:
+      - development-volume:/var/lib/postgresql/data
+
+  quote-service:
+    container_name: quote-service
+    image: quote-service:0.0.1
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8081:8081"
+    build:
+      context: quote-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=development
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-development:5432/quote_db
+      - SPRING_DATASOURCE_USERNAME=dev-user
+      - SPRING_DATASOURCE_PASSWORD=${AMBULANCE_DEVELOPMENT_PASSWORD}
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    depends_on:
+      - db-production
+      - db-development
+
+  doctor-service:
+    container_name: doctor-service
+    image: doctor-service:0.0.1
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8082:8082"
+    build:
+      context: doctor-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=development
+
+  discovery-service:
+    container_name: discovery-service
+    image: discover-service:0.0.1
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8761:8761"
+    build:
+      context: discovery-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=development
+
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: taman@squareflakes.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "5050:80"
+
+volumes:
+  production-volume: #
+  development-volume: #

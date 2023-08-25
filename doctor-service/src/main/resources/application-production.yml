@@ -1,0 +1,14 @@
+server:
+  port : 8082
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/quote_db
+    username: production-user
+    password: 5yJeXD876Vs8
+    driverClassName: org.postgresql.Driver

@@ -1,0 +1,14 @@
+com/metta/quotes/controller/QuoteController.class
+com/metta/quotes/service/QuoteService.class
+com/metta/quotes/exception/QuoteNotFoundException.class
+com/metta/quotes/validator/LanguageValidator.class
+com/metta/quotes/model/ErrorResponse.class
+com/metta/quotes/model/QuoteDTO.class
+com/metta/quotes/configuration/QuotesConfiguration.class
+com/metta/quotes/repository/QuoteRepository.class
+com/metta/quotes/model/Quote.class
+com/metta/quotes/controlleradvice/HttpExceptionHandler.class
+com/metta/quotes/validator/Language.class
+com/metta/quotes/QuotesApplication.class
+com/metta/quotes/controlleradvice/CustomExceptionHandler.class
+com/metta/quotes/utils/Constants.class

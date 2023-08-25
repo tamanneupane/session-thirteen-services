@@ -1,0 +1,9 @@
+@SpringBootApplication
+     @SpringBootConfiguration
+     @EnableAutoConfiguration
+     @ComponentScan
+
+@Configuration
+
+@Bean
+

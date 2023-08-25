@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "40fdf6ee-59ea-490f-8ab1-c851954083e8",
+		"name": "Quote API Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "369370"
+	},
+	"item": [
+		{
+			"name": "Get All Quotes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{portocal}}://{{domain}}:{{port}}/api/v1/quotes",
+					"protocol": "{{portocal}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"quotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{portocal}}://{{domain}}:{{port}}/api/v1/quote-detail?quoteId=5",
+					"protocol": "{{portocal}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"quote-detail"
+					],
+					"query": [
+						{
+							"key": "quoteId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quote Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{portocal}}://{{domain}}:{{port}}/api/v1/delete-quote?quoteId=5",
+					"protocol": "{{portocal}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"delete-quote"
+					],
+					"query": [
+						{
+							"key": "quoteId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Quote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Quote 1\",\n    \"language\": \"en\",\n    \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{portocal}}://{{domain}}:{{port}}/api/v1/create-quote",
+					"protocol": "{{portocal}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"create-quote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Quote 2\",\n    \"language\": \"en\",\n    \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{portocal}}://{{domain}}:{{port}}/api/v1/update-quote?quoteId=5",
+					"protocol": "{{portocal}}",
+					"host": [
+						"{{domain}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"update-quote"
+					],
+					"query": [
+						{
+							"key": "quoteId",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "8081",
+			"type": "string"
+		},
+		{
+			"key": "portocal",
+			"value": "http",
+			"type": "string"
+		}
+	]
+}

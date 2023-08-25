@@ -1,0 +1,14 @@
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/repository/QuoteRepository.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/service/QuoteService.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/validator/LanguageValidator.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/configuration/QuotesConfiguration.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/validator/Language.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/controlleradvice/CustomExceptionHandler.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/controller/QuoteController.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/model/ErrorResponse.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/model/QuoteDTO.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/exception/QuoteNotFoundException.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/model/Quote.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/QuotesApplication.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/controlleradvice/HttpExceptionHandler.java
+/Users/tamanneupane/personal/Training/session-13/spring-boot/session-thirteen-services/quote-service/src/main/java/com/metta/quotes/utils/Constants.java
